@@ -30,7 +30,7 @@ const Add = () => {
     const handleSubmit= async(e)=>{
         e.preventDefault();
 
-        await axios.post('http://localhost:5000/api/create',user)
+        await axios.post('https://todocurdmernstackbackend.onrender.com/api/create',user)
         .then((res)=>{
            toast.success(res.data.message,{position:'top-right'});
 
