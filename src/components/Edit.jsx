@@ -25,7 +25,7 @@ const Edit = () => {
     console.log(user)
 
     useEffect(()=>{
-        axios.get(`http://localhost:5000/api/getone/${id}`).then((res)=>{
+        axios.get(`https://todocurdmernstackbackend.onrender.com/api/getone/${id}`).then((res)=>{
 
             setUser(res.data.user)
             toast.success(res.data.message)
@@ -38,7 +38,7 @@ const Edit = () => {
     const handleSubmit=async(e)=>{
           e.preventDefault();
 
-        await axios.put(`http://localhost:5000/api/updateuser/${id}`,user)
+        await axios.put(`https://todocurdmernstackbackend.onrender.com/api/updateuser/${id}`,user)
         .then((res)=>{
 
             setUser(res.data.updateduser)
