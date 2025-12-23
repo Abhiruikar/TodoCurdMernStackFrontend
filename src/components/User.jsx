@@ -10,7 +10,7 @@ const User = () => {
     const [users, setUsers] = useState([])
 
     const featchData = async () => {
-        const res = await axios.get('http://localhost:5000/api/getall')
+        const res = await axios.get('https://todocurdmernstackbackend.onrender.com/api/getall')
         setUsers(res.data)
     }
    useEffect(() => {
@@ -20,7 +20,7 @@ const User = () => {
 
     const deleteData = async (userId) => {
 
-        await axios.delete(`http://localhost:5000/api/deleteuser/${userId}`)
+        await axios.delete(https://todocurdmernstackbackend.onrender.com/api/deleteuser/${userId}`)
             .then((res) => {
                 console.log(res)
                 toast.success(res.data.message, { position: 'top-right' })
